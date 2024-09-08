@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✨Yoga✨</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: #8427e2;
+        font-size: 50px;
+      }
+
+      h2 {
+        border: 1px solid #8427e2;
+        font-size: 30px;
+        border-radius: 10px;
+        display: block;
+        margin: 0 auto 10px;
+        width: 40%;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      .yogaImg {
+        display: block;
+        margin: 15px auto;
+        max-width: 40%;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      p {
+        line-height: normal;
+        font-size: 20px;
+        text-align: center;
+        width: 50%;
+        margin: 10px auto;
+      }
+
+      button {
+        border-radius: 25px;
+        margin: 10px auto;
+        display: block;
+        background-color: #fff;
+        border: 1px solid #8427e2;
+        color: #8427e2;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 16px 24px;
+        text-decoration: none;
+        transition: all 200ms ease;
+        box-shadow: 0 1px 20px rgb(0 0 0 / 50%);
+      }
+      button:hover {
+        color: #fff;
+        background: #8427e2;
+      }
+
+      .sign-up {
+        display: block;
+        margin-top: 10px;
+        color: #8427e2;
+        text-decoration: none;
+      }
+      .sign-up:hover {
+        text-decoration: underline;
+      }
+      .blue {
+        color: #1420c0;
+        font-weight: bolder;
+      }
+
+      body {
+        background-image: linear-gradient(to top, #f4f0e5 0%, #72afd3 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>I love Yoga!</h1>
+    <h2>Especially AcroYoga</h2>
+    <div class="yogaImg">
+      <hr />
+      <img
+        src="https://i.pinimg.com/originals/8c/03/86/8c0386a63b68641d1d0cf9f617afb929.jpg"
+        alt="Yoga Pose"
+      />
+      <hr />
+    </div>
+    <div>
+      <p>
+        "Yoga is a group of
+        <strong>physical, mental, and spiritual</strong> practices or
+        disciplines which originated in <span class="blue">ancient India</span>.
+        Yoga is one of the six orthodox philosophical schools of
+        <em>Hinduism</em>. There is a broad variety of yoga schools, practices,
+        and goals in Hinduism, Buddhism, and Jainism."
+        <br />
+        <a
+          href="https://en.wikipedia.org/wiki/Yoga"
+          target="_blank"
+          class="sign-up"
+        >
+          Learn more on wikipedia
+        </a>
+
+        <button>Sign up</button>
+        This page was built by
+        <a href="https://www.jackieochambers.com/" target="_blank">
+          Jackie Chambers
+        </a>
+      </p>
+    </div>
+    <script>
+      function yogaSignUp() {
+        let doneYoga = prompt("Have you done Yoga?");
+        let header = document.querySelector("h1");
+
+        if (doneYoga === "yes") {
+          header.innerHTML = `😊 <br /> Great! See you in class!`;
+        } else {
+          header.innerHTML = `<br /> Try a class with me!`;
+        }
+      }
+      let signUpButton = document.querySelector("button");
+      signUpButton.addEventListener("click", yogaSignUp);
+    </script>
+  </body>
+</html>
